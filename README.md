@@ -18,5 +18,5 @@ of Universita' di Milano.
     }
 
 where `authorization_token` is a base64 encoded token,
-needed for the [HTTP basic authentication protocol](https://tools.ietf.org/html/rfc2617)
+needed for the [HTTP basic authentication](https://tools.ietf.org/html/rfc2617)
 by the university server.
