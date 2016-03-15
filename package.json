@@ -1,0 +1,22 @@
+{
+  "name": "seunimi_api",
+  "version": "1.0.0",
+  "description": "API for fetching episodes for the *Software Engineering* course of Universita' di Milano.",
+  "main": "./src/main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giuscri/seunimi_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giuscri/seunimi_api/issues"
+  },
+  "homepage": "https://github.com/giuscri/seunimi_api#readme"
+}
