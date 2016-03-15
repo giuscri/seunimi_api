@@ -17,9 +17,9 @@ describe('server', function() {
     it('should fetch the number of episodes', function(done) {
         options['path'] = '/api/episode';
 
-        get_and_expect(options, {'n_episodes': 20}, done);
+        get_and_expect(options, {'n_episodes': 38}, done);
     });
-    
+
     it('should fetch data about episode 1', function(done) {
         options['path'] = '/api/episode/1';
 
