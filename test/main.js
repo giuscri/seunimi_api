@@ -43,6 +43,12 @@ describe('server', function() {
         get_and_expect(options, {'valid': false}, done);
     });
 
+    it('should NOT fetch data when passed invalid url', function(done) {
+        options['path'] = '/stack/overflow';
+
+        get_and_expect(options, {'valid': false}, done);
+    });
+
     after(function() {
         server.close();
     });
