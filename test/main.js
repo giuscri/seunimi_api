@@ -14,13 +14,13 @@ describe('server', function() {
         'path': '/api'
     };
 
-    it('should fetch the number of episodes', function() {
+    it('should fetch the number of episodes', function(done) {
         options['path'] = '/api/episode';
 
-        get_and_expect(options, {'n_episodes': 20}, () => done());
+        get_and_expect(options, {'n_episodes': 20}, done);
     });
-
-    it('should fetch data about episode 1', function() {
+    
+    it('should fetch data about episode 1', function(done) {
         options['path'] = '/api/episode/1';
 
         var expected = {
@@ -28,19 +28,19 @@ describe('server', function() {
             'video_url': 'https://homes.di.unimi.it/~belletc/down1.php?FILENAME=PS2013-01.mp4',
             'authorization_token': '...',
         };
-        get_and_expect(options, expected, () => done());
+        get_and_expect(options, expected, done);
     });
 
-    it('should NOT fetch data about episode 42', function() {
+    it('should NOT fetch data about episode 42', function(done) {
         options['path'] = '/api/episode/42';
 
-        get_and_expect(options, {'valid': false}, () => done());
+        get_and_expect(options, {'valid': false}, done);
     });
 
-    it('should NOT fetch data about episode F', function() {
+    it('should NOT fetch data about episode F', function(done) {
         options['path'] = '/api/episode/F';
 
-        get_and_expect(options, {'valid': false}, () => done());
+        get_and_expect(options, {'valid': false}, done);
     });
 
     after(function() {
@@ -58,4 +58,3 @@ function get_and_expect(options, expected, callback) {
         });
     });
 }
-
